@@ -4,7 +4,7 @@
 
 Hector:
 
-Leí un artículo sobre la factorización de cholesky para recordar el concepto de factorización de matrices, de esta manera pude darme cuenta que solo es válido para matrices positivas definidas [articulo](enlace: https://www.dropbox.com/home/Cholesky-Theory?preview=CholeskyDecomposition.pdf) .
+Leí un artículo sobre la factorización de cholesky para recordar el concepto de factorización de matrices, de esta manera pude darme cuenta que solo es válido para matrices positivas definidas [articulo](https://www.dropbox.com/home/Cholesky-Theory?preview=CholeskyDecomposition.pdf) .
 En mi caso recordar un tema como Cholesky me llevó a leer el capítulo 7 referente a Matrices simétricas y formas cuadráticas del libro “Algebra Lineal y sus aplicaciones” de David C. Lay, como forma de repaso para los temas que se han de desarrollar. Como última consulta de este avance , leí en este [paper](https://www.dropbox.com/home/Cholesky-Theory?preview=LU%2C++QR+and+Cholesky+Factorizations+using+vector+capabilities+of+GPU%27s.pdf) acerca de diversas implementaciones de algunos de los temas vistos en clase en CUDA. Entre los miembros del equipo aún nos encontramos definiendo si se implementará cholesky en openMP o CUDA.
 
 
