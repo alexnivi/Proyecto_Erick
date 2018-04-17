@@ -9,6 +9,6 @@ threads en arquitecturas multicore.] (https://upcommons.upc.edu/bitstream/handle
 [FACTORIZACIÓN DE CHOLESKY
 MODIFICADA DE MATRICES
 DISPERSAS SOBRE
-MULTIPROCESADORES](http://gac.udc.es/tesis/MariaJMartin.pdf)
+MULTIPROCESADORES] (http://gac.udc.es/tesis/MariaJMartin.pdf)
 
 El resto de los recursos están en [dropbox](https://www.dropbox.com/home/Cholesky-Theory)
