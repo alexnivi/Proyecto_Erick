@@ -3,7 +3,7 @@
 ## Objetivo: 
 ### Realizar una implementación de la factorización de cholesky en alguna de las tecnologías de cómputo distribuido o compartido visto en clase.
 
-### Teoría de Cholesky
+### Teoría de Cholesky:
 
 Hector:
 
