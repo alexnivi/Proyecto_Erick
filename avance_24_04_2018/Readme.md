@@ -26,6 +26,7 @@ En estos capítulos se aprecia la descripción de los algoritmos para:
 Uriel detalla un poco más lo anterior en su avance de la semana.
 
 
+
 Alejandro:
 
 Para la implementación de un problema que aplique la factorización Cholesky se implementará una o varias iteraciones de un filtro de Kalman sencillo, con parámetros estáticos para hacer dle problema de optimización de logverosimilitud algo relativamente sencillo, aunque nada simple.
