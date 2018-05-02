@@ -26,6 +26,7 @@ En estos capítulos se aprecia la descripción de los algoritmos para:
 Uriel detalla un poco más lo anterior en su avance de la semana.
 
 
+
 Alejandro:
 
 
