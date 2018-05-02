@@ -29,10 +29,18 @@ Uriel detalla un poco más lo anterior en su avance de la semana.
 
 Alejandro:
 
+Para la implementación de un problema que aplique la factorización Cholesky se implementará una o varias iteraciones de un filtro de Kalman sencillo, con parámetros estáticos para hacer dle problema de optimización de logverosimilitud algo relativamente sencillo, aunque nada simple.
 
+Uno de los problemas que vamos a ver en esto será el de la optimización, dado que no conozco en este momento algún algoritmo de optimización, ya sea restringida o libre que pueda ser distribuido oparalelizado, por lo que al ser el filtro de Kalman un proceso iterativo que involucra una optimización, esto representará un problema de join de forks adicional.
 
+Se incluye en implementación un ejemplo simple del filtro de Kalman en C.
 
+La factoriación de Cholesky entra en elmomento de procesar y calcular la matriz inversa de la matriz de varianzas-covarianza para la función de logverosimilitud que va a optimizarse después de la iteración de Kalman con las estimaciones posteriores.
 
+Algo de la literatura recomendada para el filtro de Kalman:
+(introduction to random signals and applied kalman filtering pdf)[https://wp.kntu.ac.ir/ghaffari/Advanced%20Control-II-2017/Introduction_to_Random_Signals_and_Applied_Kalman_Filtering-4th_edition.pdf]
+
+la cual ilustra perfectamente el uso del Filtro para procesamiento de señales y da algunas nociones básicas de procesos estocásticos para ser manipulados mediante el filtro.
 
 Uriel:
 
