@@ -13,6 +13,19 @@ Se seguirá con la lectura del libro recomendado para más, mejores y posibles i
 
 Alejandro:
 
+Dado el problema del filtro de Kalman en el cual se quiere utilizar la factorización Cholesky, se requiere implementar un algoritmo de optimización para encontrar los estimadores máximo verosímiles de la distribución que se utilice, hasta ahora consierando que será una distribución normal.
+
+La paquetería que parece razonable es ['SCS'](https://github.com/cvxgrp/scs) (splitting conic solver), paquetería utilizada para resolver problemas convexos de gran escala basado en el paper: [Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding](https://web.stanford.edu/~boyd/papers/scs.html).
+
+Es una paquetería escrita en C que puede ser utilizada en C, C++, Python, Matlab y R.
+
+Resuelve problemas convexosusando el método de dirección alternante de multiplicadores [(ADMM)](http://web.stanford.edu/~boyd/papers/admm_distr_stats.html) regresando las soluciones de los problemas primales y duales qsi es que el problema es resoluble.
+
+Desde elpunto de vista de la verosimilitud normalpuede utilizarce la paquetería [liknorm](https://github.com/limix/liknorm), librería escrita en C para calcular los momentos de distribución normal.
+
+Aunque el objetivo de esta librerñia será la aplicación en Python, el repositorio nos permite observar el código para calcular la verosimilitud normal en un repositorio de [github](https://github.com/limix/liknorm/blob/master/src/liknorm.c).
+
+
 
 Uriel:
 
