@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
  
+// PROPIAMENTE SE CALCULA LA FACTORIZACIÓN CHOLESKY
 double *cholesky(double *A, int n) {
     double *L = (double*)calloc(n * n, sizeof(double));
     if (L == NULL)
@@ -20,6 +21,7 @@ double *cholesky(double *A, int n) {
     return L;
 }
  
+ // SE IMPRIME LA MATRIZ
 void show_matrix(double *A, int n) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++)
@@ -27,25 +29,56 @@ void show_matrix(double *A, int n) {
         printf("\n");
     }
 }
+
+// SE OBTIENE LA DIMENSIÓN DE LA MATRIZ A FACTORIZAR
+int get_dim(){
+    int n=0;
+    char c;
+
+    while((c = getchar()) != EOF) {
+        if(c == '\n') {
+            n++;
+        }
+    }
+    return(sqrt(n));
+}
+
+// SE PUEBLA LA MATRIZ
+double *arr_mat(int n, double *arr) {
+
+    FILE * matriz;
+    double num;
+    int i;
+
+    matriz = fopen("matrizSPD.txt", "r");
+    
+    for (i=0; i<n; i++) {
+        fscanf(matriz, "%lf", &num);
+        arr[i]=num;
+    }
+
+    return arr;
+}
  
 int main() {
-    int n = 3;
-    double m1[] = {25, 15, -5,
-                   15, 18,  0,
-                   -5,  0, 11};
-    double *c1 = cholesky(m1, n);
-    show_matrix(c1, n);
+    int dim,n,i;
+    dim = get_dim();
+    n=pow(dim,2);
+    double *matap = malloc(sizeof(double)*n);
+    double matriz[n];
+
+    matap = arr_mat(n, matap);
+
+    for(i=0;i<n;i++){
+        matriz[i]=*matap;
+        printf("%f\n", matriz[i]);
+        matap++;
+    }
+
+    double *fact = cholesky(matriz, dim);
+    show_matrix(fact, dim);
     printf("\n");
-    free(c1);
- 
-    n = 4;
-    double m2[] = {18, 22,  54,  42,
-                   22, 70,  86,  62,
-                   54, 86, 174, 134,
-                   42, 62, 134, 106};
-    double *c2 = cholesky(m2, n);
-    show_matrix(c2, n);
-    free(c2);
- 
+    free(fact);
+
     return 0;
 }

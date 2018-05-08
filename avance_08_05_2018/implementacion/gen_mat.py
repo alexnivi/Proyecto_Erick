@@ -9,9 +9,9 @@ def gen_matSPD(dim):
 	dim = int(dim)
 	mat = pd.DataFrame()
 
-	for i in range(dim):
-		list=[random.randrange(-100, 100) for j in range(i)]
-		for n in range(dim-1-i):
+	for i in range(1,dim+1):
+		list=[random.randrange(-10000, 10000)/100 for j in range(i)]
+		for n in range(dim-i):
 			list.append(0)
 		list = pd.DataFrame(list)
 		mat=pd.concat([mat,list], axis=1)
