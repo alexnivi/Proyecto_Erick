@@ -9,8 +9,19 @@
 Donde se debe sustituir ```n``` por la dimensión de la matriz cuadrada positiva definida a generar.
 
 El resultado se almacenará en el archivo:
-```matrizSPD.txt```
-que será el insumo del algoritmo de factorización de cholesky:
+```matrizSPD.txt``` en una sola columna, para después ser el insumo del algoritmo de factorización de cholesky:
 ```chol.c```
 
-el cual imprime en primer lugar la matriz a factorizar y posteriormente la matriz factor.
+Para tener una mejor apreciación de la matriz se estructurará en el archivo:
+```MATRIZ.txt``` solo como referencia.
+
+El script ```chol.out``` realizará mediante standar imput la ingesta de los elementos de la matriz y posteriormente
+ cual imprime la matriz la matriz factor en el archivo:
+```fact.txt```
+
+Se dejan los archivos .txt como ejemplo con matrices de dimensión 50 x50.
+
+El script ```Ejercicio.sh``` realiza una nueva iteración del proceso.
+Ejecutar como:
+
+```source Ejercicio.sh```

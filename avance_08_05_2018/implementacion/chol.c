@@ -71,7 +71,7 @@ int main() {
 
     for(i=0;i<n;i++){
         matriz[i]=*matap;
-        printf("%f\n", matriz[i]);
+//        printf("%f\n", matriz[i]);
         matap++;
     }
 
