@@ -24,4 +24,4 @@ Se dejan los archivos .txt como ejemplo con matrices de dimensión 50 x50.
 	Ejecutar como: ```source Ejercicio.sh```
 
 
-Por último los scripts cholesky_1.c y chol_seq.c son ejemplos de aplicaciones de matrices pequeñas en el algoritmo de la factorización choleskyu tanto secuencial como en paralelo con tiempos de ejecución y matrices introducidas a mano en el scripr.
+Por último los scripts ```cholesky_1.c``` y ```chol_seq.c``` son ejemplos de aplicaciones de matrices pequeñas en el algoritmo de la factorización choleskyu tanto secuencial como en paralelo con tiempos de ejecución y matrices introducidas a mano en el scripr.
