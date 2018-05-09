@@ -5,6 +5,34 @@
 
 ### Implementación de la factorización de Cholesky:
 
+Hector:
+
+Para el presente avance los esfuerzos se concentraron en revisar la implementación de matrices en C, utilizando como referencia las notas del curso y las recomendaciones para poder introducir matrices de mayor tamaño de una manera mas eficiente en el proceso como tener un mejor manejo de memoria.
+
+Un punto importante es poder medir que tan eficiente es el proceso, por lo cual se revisaron diferentes maneras de medir el tiempo de ejecución para  las funciones en c, siendo algunos de los revisados:
+
+- Incluir la librería strokec4, strokec5, strokec6, strokec7 
+- Definir un struct par los datos que vamos a cargar: strokec8 struct\strokec5  timeval  init_time, end_time
+- Utilizar la función gettimeofday \strokec7  para obtener el tiempo con precisión en el orden de .001 milisegundos.
+- Medir la diferencia entre el tiempo de inicio y el de final para obtener el estimado.
+
+Otro método es utilizando la función Clock:
+
+- incluir la librería \strokec4 #include\strokec5  \strokec6 <time.h>\strokec5 
+\strokec7 
+- Utilizar clock_t start = clock(); para tomar el tiempo de inicio.
+- Utilizar clock_t end = clock(); para tomar el tiempo de finalizaci\'f3n de la función.
+- Medir la diferencia entre los tiempos de inicio y final.
+
+Un método que también se puede utilizar cuando compilamos en Linux es aprovechando \strokec9 gprof:
+
+- Agregar el indicador -pg en la compilación y en la ejecución del programa
+- Ejecutar el \strokec7
+- Hacer el llamado a gprof 'nombre del ejecutabla
+- Se despliega una serie de mediciones 
+
+
+
 Alejandro:
 
 Utilizando las referencias de entregas anteriores y combinándola con consultas prácticas de foros en internet, se consiguió la implementación del algoritmo secuencial (3 for anidados) del algoritmo de la factorización cholesky.
@@ -31,6 +59,38 @@ En la carpeta implementación se encontrará un ejemplo de la generación y fact
   - [https://www.tutorialspoint.com/c_standard_library/c_function_calloc.htm]
   - [https://www.tutorialspoint.com/cprogramming/c_return_arrays_from_function.htm]
   - [https://stackoverflow.com/questions/19752644/row-to-column-and-column-to-row-using-awk]
+
+Uriel:
+
+La implementación del script del avance anterior dio a la tarea de comparar resultados con diferentes procesos ya ejecutados, por lo cual en este avance la dedicación fue a revisar la implementación secuencial de cholesky presentada en avances anteriores y comparar resultados con la implementación en paralelo, para ello se utilizaron:
+
+1) Matriz de 3x3: 
+
+Resultados, secuencial :
+gcc -Wall source chol_sec.c -o chol_sec.out -lm
+./chl_sec.out
+Tiempo: 80.000000
+	
+Resultado, Paralelo:
+gcc -Wall -fopenmp source/cholesky_1.c -o cholesky_1.out -lm
+./cholesky_1.out
+tiempo: 105.000000
+
+2) Matriz de 5x5: 
+Resultado, secuencial:
+Tiempo: 83.000000\
+
+Resultado, Paralelo:
+tiempo: 326.000000
+
+En estos resultados se observó un menor tiempo considerable en la ejecución secuencial. Esto puede deberse a diversos factores, entre los cuales se revisaron:
+- Las matrices son muy pequeñas y los cálculos no son significativos, por lo cual consume mas tiempo el código adicional y el algoritmo para ejecutar en paralelo y por tanto, en implementaciones de matrices mucho mayores se podrá observar la diferencia.
+- El proceso presenta cache miss debido a la forma en que se lee la información y por tanto genera un mayor tiempo de ejecución.
+- Existen líeas de código innecesarias que provocan tiempos muertos o retrocesos.
+
+
+
+
 
 Equipo:
 
