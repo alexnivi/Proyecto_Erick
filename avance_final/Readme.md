@@ -19,9 +19,14 @@ Uriel:
 
 Equipo:
 
-En esta fase el equipo se dedicó a la implementación práctica en C así como revisión y corrección de errores del algoritmo desarrollado en entregas anteriores. El trabajo escrito está casi listo y solo falta agregar algunas referencias al respecto
+En esta fase el equipo se dedicó a la implementación práctica en C así como revisión y corrección de errores del algoritmo desarrollado en entregas anteriores. 
+Se implementó un programa en r para la creación de matrices que luego alimentaran el script de C para realizar la factorización Cholesky.
+
+El trabajo escrito está casi listo y solo falta agregar algunas referencias, conclusiones y listo. Por ahí escriban algo que crean  que deba llevar de conclusiones, un pequeño parrafo, palabras de agradecimiento o  lo que quieran agregar. Yo lo agrego al escrito final y presentacion.
 
 
-El trabajo escrito también cooperativo está [aquí](https://www.dropbox.com/home/Cholesky-Theory?preview=escrito.pdf)
+El trabajo escrito está aquí [aquí](https://www.dropbox.com/home/Cholesky-Theory?preview=escrito.pdf)
+
+La presentación se encuentra [aquí](https://www.dropbox.com/home/Cholesky-Theory?preview=presentacion.pdf)
 
 En la carpeta [Referencias](https://www.dropbox.com/home/Cholesky-Theory) tenemos los artículos escritos.
