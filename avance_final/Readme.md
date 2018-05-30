@@ -12,10 +12,14 @@ Se trabajo en el avance y entrega del trabajo escrito. Se probaron nuevas matric
 
 
 Alejandro:
-
+Se procesan para los resultados de la implementación matrices de dimensión 2x2, 5x5, ... hasta 1000 x 1000, 10,000 x 10,000.
+Esto para comparar tiempos de procesamiento en secuencialy en paralelo.
+Se implementa el algoritmo de generación de magrices con un Rscript en el proceso ya desarrollado.
 
 Uriel:
-
+Se desarrolla una metodología de medición de tiempoen el script que no involucre la generación de matrices y solamente mida el procesamiento
+de las matrices según su tamaño.
+Se incorpora en la implementación el paradigma de las matrices como structs.
 
 Equipo:
 
